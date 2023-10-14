@@ -12,4 +12,16 @@ jobs:
             MIDDLE_NAME: The
             LAST_NAME: Octocat
           run: |
-            echo ${{vars.ORG_NAME}}$MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME ${{secrets.SEC_KEY}} ${{secrets.NO_SUCH_SEC_KEY}}..
+            echo ${{vars.ORG_NAME}}$MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME ${{secrets.SEC_KEY}} ${{secrets.NO_SUCH_SEC_KEY}}.
+    my-2nd-job:
+        name: My Job
+        runs-on: ubuntu-latest
+        steps:
+          - name: Print a greeting
+            env:
+              MY_VAR: Hi there! My name is
+              FIRST_NAME: Mona
+              MIDDLE_NAME: The
+              LAST_NAME: Octocat
+            run: |
+              echo ${{vars.ORG_NAME}}$MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME ${{secrets.SEC_KEY}} ${{secrets.NO_SUCH_SEC_KEY}}..
