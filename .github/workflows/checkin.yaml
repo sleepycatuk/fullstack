@@ -3,7 +3,7 @@ on: [push]
 jobs:
     my-job:
       name: My Job
-      runs-on: ubuntu-latest
+      runs-on: ubuntu-22.04
       steps:
         - name: Print a greeting
           env:
@@ -15,7 +15,7 @@ jobs:
             echo ${{vars.ORG_NAME}}$MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME ${{secrets.SEC_KEY}} ${{secrets.NO_SUCH_SEC_KEY}}.
     my-2nd-job:
         name: My Job
-        runs-on: ubuntu-latest
+        runs-on: ubuntu-20.04
         steps:
           - name: Print a greeting
             env:
