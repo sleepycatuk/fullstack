@@ -12,4 +12,4 @@ jobs:
             MIDDLE_NAME: The
             LAST_NAME: Octocat
           run: |
-            echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME ${{secrets.SEC_KEY}} ${{secrets.NO_SUCH_SEC_KEY}}..
+            echo ${{var.ORG_NAME}}$MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME ${{secrets.SEC_KEY}} ${{secrets.NO_SUCH_SEC_KEY}}..
